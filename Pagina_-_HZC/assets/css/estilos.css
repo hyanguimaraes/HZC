@@ -1,14 +1,17 @@
+/*Chamada da fonte especial para utilizar ícones como fonte*/
 @font-face {
     font-family: 'icones';
     src: url(../font/icones.ttf);
 }
 
+/*Estilização do corpo principal da página*/
 body{
     background-color: #1D232A;
     font-family: 'Open Sans', 'icones', sans-serif;
     color: #FFFFFF;
 }
 
+/*Estilização do cabeçalho*/
 .cabecalho{
     display: flex;
     justify-content: space-between;
@@ -32,6 +35,7 @@ body{
     width: 40px;
 }
 
+/*Estilização do menu lateral*/
 .menu_lateral{
     display: flex;
     flex-direction: column;
@@ -99,4 +103,84 @@ body{
 
 .menu_lateral_link_pinturas::before{
     content: "\e90a";
+}
+
+/*Estilização do conteúdo principal da página - cartões*/
+.principal{
+    padding: 24px 16px;
+}
+
+.titulo_pagina{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cartao{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.cartao_conteudo{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cartao_destaque{
+    grid-column: span 2;
+}
+
+.cartao_titulo{
+    font-size: 1.2rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.cartao_perfil{
+    font-size: 0.9rem;
+    color: #95999C;
+    grid-column: span 2;
+}
+
+.cartao_info{
+    display: flex;
+    align-items: center;
+    color: #95999C;
+}
+
+.cartao_info_tempo::before{
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao_info_visualizacoes::before{
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.cartao_botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.cartao_botao_play::before{
+    content: "\e90b";
+    font-size: 24px;
+}
+
+.cartao_botao_destaque{
+    width: 100%;
+    grid-column: span 2;
+}
+
+.cartao_botao_destaque::before{
+    margin-right: 8px;
 }
