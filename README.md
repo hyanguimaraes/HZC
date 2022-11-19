@@ -6,7 +6,7 @@ Rápida descrição do objetivo de fazer esse projeto
 | -------------  | --- |
 | :sparkles: Nome        | **Página - HZC**
 | :label: Tecnologias | HTML, CSS, JavaScript
-| :rocket: URL         | 
+| :rocket: URL         | https://hyanguimaraes.github.io/HZC/
 | :fire: Curso     | https://cursos.alura.com.br/course/css-dispondo-elementos-flexbox-grid
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
