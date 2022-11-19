@@ -126,7 +126,7 @@ body{
     align-items: center;
 }
 
-.menu_lateral_link_ativo{
+.menu_lateral_link:hover{
     color: #FFFFFF;
     padding-left: 56px;
     border-left: 8px solid #FFFFFF
@@ -191,6 +191,16 @@ body{
    gap: 16px; 
 }
 
+@media screen and (min-width: 1440px){
+    .secao{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .titulo_secao{
+        grid-column: span 4;
+    }
+}
+
 .titulo_secao{
     font-size: 1.2rem;
     font-weight: 700;
@@ -200,6 +210,13 @@ body{
     .principal{
         display: grid;
         grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "titulo_pagina titulo_pagina titulo_pagina"
+            "destaque_video destaque_video videos_recentes"
+            "secao_videos secao_videos secao_videos"
+            "novas_artes destaque_produto destaque_produto"
+            "secao_produtos secao_produtos secao_produtos"
+        ;
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
@@ -222,6 +239,10 @@ body{
 
 .cartao_destaque{
     margin-bottom: 16px;
+}
+
+.cartao_imagem_desktop{
+    display: none;
 }
 
 .cartao_titulo{
@@ -293,7 +314,24 @@ body{
 }
 
 @media screen and (min-width: 1440px){
-    .cartao_recentes{
+    .cartao_imagem_mobile{
+        display: none;
+    }
+
+    .cartao_imagem_desktop{
+        display: block;
+    }
+
+    .cartao_destaque{
+        margin-bottom: 0;
+    }
+
+    .cartao_botao_destaque{
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+
+    .cartao_recentes, .cartao_novas_artes{
         display: grid;
         grid-template-columns: repeat(2, auto);
         align-items: center;
@@ -301,9 +339,10 @@ body{
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
 
-    .cartao_recentes .cartao_titulo{
+    .cartao_recentes, .cartao_novas_artes .cartao_titulo{
         grid-column: auto;
     }
 
@@ -340,5 +379,29 @@ body{
     .cartao_item_perfil{
         font-size: 0.8rem;
         color: #95999C;
+    }
+
+    .destaque_video{
+        grid-area: destaque_video;
+    }
+
+    .videos_recentes{
+        grid-area: videos_recentes;
+    }
+
+    .secao_videos{
+        grid-area: secao_videos;
+    }
+
+    .novas_artes{
+        grid-area: novas_artes;
+    }
+
+    .destaque_produto{
+        grid-area: destaque_produto;
+    }
+
+    .secao_produtos{
+        grid-area: secao_produtos;
     }
 }
